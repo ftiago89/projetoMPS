@@ -1,7 +1,10 @@
 package business.model;
 
 //Enbroidery modelling
+import java.util.Set;
+
 public class Enbroidery {
-    private String type;
+    private EnbroideryStyle style;
+    private Set<Line> lines;
     //enbroidery image
 }

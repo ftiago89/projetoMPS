@@ -1,9 +1,12 @@
 package business.model;
 
 //line modelling
-public class Line {
+class Line {
     private Color color;
-    private double thickness;
+
+    public Line(Color color) {
+        this.color = color;
+    }
 
     public Color getColor() {
         return color;
@@ -11,18 +14,5 @@ public class Line {
 
     public void setColor(Color color) {
         this.color = color;
-    }
-
-    public double getThickness() {
-        return thickness;
-    }
-
-    public void setThickness(double thickness) {
-        this.thickness = thickness;
-    }
-
-    public Line(Color color, double thickness) {
-        this.color = color;
-        this.thickness = thickness;
     }
 }

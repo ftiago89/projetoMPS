@@ -10,5 +10,5 @@ package business.model;
  * @author felipe
  */
 public enum Collar {
-    V, REDONDA;
+    V, ROUND;
 }
