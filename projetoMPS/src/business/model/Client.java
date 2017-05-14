@@ -1,14 +1,36 @@
 package business.model;
 
 //Client modelling
-public class Client {
-    private String name, address, cpf, email;
 
-    public Client(String name, String address, String cpf, String email) {
+import java.io.Serializable;
+
+public class Client extends Entity implements Serializable{
+    private String login, password, name, cpf, email;
+    private Address address;
+
+    public Client(String login, String password, String name, String cpf, String email, Address address) {
+        this.login = login;
+        this.password = password;
         this.name = name;
-        this.address = address;
         this.cpf = cpf;
         this.email = email;
+        this.address = address;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getName() {
@@ -17,14 +39,6 @@ public class Client {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public String getCpf() {
@@ -41,5 +55,13 @@ public class Client {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 }

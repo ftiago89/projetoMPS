@@ -1,17 +1,32 @@
 package business.model;
 
 
-public class Product {
-    private String name; //product name
-    private String description;
-    private Color color;
+public class Product extends Entity{
+    protected String name, description, brand;
+    protected Color color;
 
-    public Product(String name, String description, Color color) {
+    public Product(String name, String description, String brand, Color color) {
         this.name = name;
         this.description = description;
+        this.brand = brand;
         this.color = color;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
 
     public String getName() {
         return name;

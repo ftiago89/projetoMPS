@@ -3,17 +3,16 @@ package business.model;
 
 public class Shirt extends Product{
     private Collar collar;
-    private Genre genre;
-    private Character size;
-    
-    public Shirt(String name, String description, Collar collar, Genre genre,
-        Color color) {
-        super(name, description, color);
-        this.collar = collar;
-        this.genre = genre;
-        this.size = size;
-    }
+    private Character size, genre;
 
+    public Shirt(String name, String description, String brand, Color color,
+            Collar collar, Character size, Character genre) {
+        super(name, description,brand, color);
+        this.collar = collar;
+        this.size = size;
+        this.genre = genre;
+    }
+    
     public Character getSize() {
         return size;
     }
@@ -30,11 +29,11 @@ public class Shirt extends Product{
         this.collar = collar;
     }
 
-    public Genre getGenre() {
+    public Character getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre) {
+    public void setGenre(Character genre) {
         this.genre = genre;
     }
 }
