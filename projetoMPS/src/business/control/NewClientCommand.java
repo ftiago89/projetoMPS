@@ -26,7 +26,7 @@ public class NewClientCommand implements ClientCrudCommand{
         
     
     @Override
-    public void execute() throws ClientNotAddedException {
+    public void execute() throws ClientNotAddedException, ValidateException {
         this.control.addClient(login, password, name, cpf, email, street,
                                 complement, ngbhood, city, state, cep);
     }
