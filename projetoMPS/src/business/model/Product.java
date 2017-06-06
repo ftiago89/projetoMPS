@@ -1,15 +1,20 @@
 package business.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Product extends Entity{
-    protected String name, description, brand;
-    protected Color color;
+    private String name, description, brand;
+    private List<Enbroidery> enbroideries;
+    private Color color;
 
-    public Product(String name, String description, String brand, Color color) {
+    public Product(String name, String description, String brand, Color color, ArrayList<Enbroidery> enbroideries) {
         this.name = name;
         this.description = description;
         this.brand = brand;
         this.color = color;
+        this.enbroideries = enbroideries;
     }
 
     public String getBrand() {
