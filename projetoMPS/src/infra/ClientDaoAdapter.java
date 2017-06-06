@@ -3,8 +3,7 @@ package infra;
  import business.model.Client;
  import business.model.Entity;
  import java.util.HashMap;
- import java.util.logging.Level;
- import java.util.logging.Logger;
+
  
  //this is the concrete adapter for file persistence
  public class ClientDaoAdapter implements PersistenceAdapter{
@@ -96,4 +95,4 @@ package infra;
                  + "cliente no adaptador.");
      }
      
- }
+}
