@@ -5,23 +5,23 @@ import business.model.Enbroidery;
 
 public class ProductEnbroideryControl {
     protected Enbroidery enbroidery;
-    ProductEnbroideryCaretaker caretaker;
+    protected ProductEnbroideryCaretaker caretaker;
 
     public ProductEnbroideryControl() {
         this.caretaker = new ProductEnbroideryCaretaker();
 	this.enbroidery = new Enbroidery();
     }
 
-    public void adicionarPersonalizacao(Enbroidery newEnbroidery) {
+    public void addPersonalization(Enbroidery newEnbroidery) {
         caretaker.addMemento(new ProductEnbroideryMemento(this.enbroidery));
         this.enbroidery = newEnbroidery;
     }
 
-    public void desfazerPersonalizacao() {
+    public void undoPersonalization() {
 	this.enbroidery = caretaker.getLastSavedState().getSavedEnbroidery();
     }
 
-    public boolean mostrarPersonalizacao() {
+    public boolean showPersonalization() {
 	if(!this.enbroidery.equals(null)){
             System.out.println(this.enbroidery.toString());
             return true;
